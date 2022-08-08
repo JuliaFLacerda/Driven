@@ -1,102 +1,305 @@
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  .absolute{
-    position: absolute;
-    right: 0;
-    margin: auto 0;
-    bottom: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.absolute{
+  position: absolute;
+  right: 0;
+  margin: auto 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  display: none;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  padding: 3%;
+  box-sizing: border-box;
+}
+header {
+  padding-right: 150px;
+  padding-left: 150px;
+  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
+}
+.header2 {
+  margin-right: auto;
+}
+.storiesbar {
+  display: flex;
+  gap: 3.5%;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-top: 88px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 18px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.bigpeople {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 24px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallpeople {
+  display: flex;
+  gap: 10px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 614px;
+}
+
+.post-header {
+  padding: 18px;
+  width: 614px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.recomendaçoes {
+  display: flex;
+  flex-direction: column;
+  width: 293px;
+  margin-top: 88px;
+  position: sticky;
+  top: 0px;
+  gap: 10px;
+  height: 594px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  list-style: none;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font11 {
+  font-size: 11px;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+.navinfooptions li a,
+.font11 {
+  font-size: 11px;
+}
+.navinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.navinfooptions {
+  flex-wrap: wrap;
+}
+.page {
+  padding-right: 150px;
+  padding-left: 150px;
+  box-sizing: border-box;
+  width: 1281px;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.header0 {
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  align-items: center;
+  width: 981px;
+}
+
+button {
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 0px;
+  border: 0;
+  color: #139ef2;
+  font-weight: bold;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.bold500 {
+  font-weight: 500;
+}
+
+input[type="text"] {
+  text-align: center;
+  width: 215px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.storiescontainer {
+  width: 616px;
+  box-sizing: border-box;
+}
+
+.header1 {
+  gap: 5px;
+}
+
+.postfooterline2 {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.postfooter {
+  padding: 18px;
+  padding-top: 10px;
+}
+
+ion-icon {
+  font-size: 22px;
+}
+
+.gap13 {
+  gap: 13px;
+  display: flex;
+}
+
+.logoinsta {
+  height: 29px;
+  border-right: 1px solid #dbdbdb;
+  padding: 8px;
+  margin: 3px;
+}
+
+.logo {
+  margin-right: auto;
+}
+.recomendaçoeswrapper {
+  position: relative;
+  left: 72px;
+}
+
+@media (min-width: 614px) and (max-width: 935px) {
+  * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
   }
 
-  footer {
-    display: none;
-    width: 100%;
-    position: fixed;
-    justify-content: space-between;
-    padding: 3%;
-    box-sizing: border-box;
-  }
   header {
-    padding-right: 150px;
-    padding-left: 150px;
+    padding-right: 20px;
+    padding-left: 20px;
     border-bottom: 1px solid #dbdbdb;
     width: 100%;
+    box-sizing: border-box;
   }
-  .header2 {
-    margin-right: auto;
-  }
+
   .storiesbar {
     display: flex;
-    gap: 3.5%;
+    justify-content: space-between;
     width: 100%;
     flex-wrap: nowrap;
     margin-top: 88px;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
-    padding: 18px;
+    padding: 5%;
     box-sizing: border-box;
-    overflow-x: hidden;
-    position: relative;
   }
-  
+
   .bigpeople {
     display: flex;
     flex-direction: column;
   }
-  
+
   .posts {
     display: flex;
     flex-direction: column;
     gap: 60px;
     margin-top: 24px;
+    width: 100%;
   }
-  
+
   .space-between {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .smallpeople {
     display: flex;
     gap: 10px;
   }
-  
+
   .post {
     display: flex;
     flex-direction: column;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
-    width: 614px;
+    width: 100%;
   }
-  
+
   .post-header {
     padding: 18px;
-    width: 614px;
+    width: 100%;
     display: flex;
     align-items: center;
     box-sizing: border-box;
   }
-  
+
   .recomendaçoes {
     display: flex;
     flex-direction: column;
-    width: 293px;
+    width: 0px;
     margin-top: 88px;
     position: sticky;
     top: 0px;
     gap: 10px;
     height: 594px;
   }
-  
+
   ul {
     display: flex;
     margin: 0;
@@ -104,19 +307,19 @@
     gap: 5px;
     list-style: none;
   }
-  
+
   .font12 {
-    font-size: 12px;
+    font-size: 70%;
   }
-  
+
   .font14 {
     font-size: 14px;
   }
-  
+
   .font11 {
     font-size: 11px;
   }
-  
+
   .gray {
     color: #8e8e8e;
   }
@@ -133,22 +336,23 @@
     flex-wrap: wrap;
   }
   .page {
-    padding-right: 150px;
-    padding-left: 150px;
     box-sizing: border-box;
-    width: 1281px;
+    width: 100%;
     display: flex;
     padding-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: center;
   }
-  
+
   .header0 {
     display: flex;
     justify-content: space-between;
     height: 54px;
     align-items: center;
-    width: 981px;
+    width: inherit;
   }
-  
+
   button {
     background-color: #ffffff;
     padding-top: 10px;
@@ -159,490 +363,286 @@
     color: #139ef2;
     font-weight: bold;
   }
-  
+
   .align-center {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-  
+
   .bold500 {
     font-weight: 500;
   }
-  
+
   input[type="text"] {
     text-align: center;
-    width: 215px;
+    width: 100%;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
   .storiescontainer {
-    width: 616px;
+    width: 100%;
     box-sizing: border-box;
   }
-  
+
   .header1 {
     gap: 5px;
   }
-  
+
   .postfooterline2 {
     display: flex;
     gap: 5px;
     margin-top: 5px;
   }
-  
+
   .postfooter {
     padding: 18px;
     padding-top: 10px;
   }
-  
+
   ion-icon {
     font-size: 22px;
   }
-  
+
   .gap13 {
     gap: 13px;
     display: flex;
   }
-  
+
   .logoinsta {
     height: 29px;
     border-right: 1px solid #dbdbdb;
     padding: 8px;
     margin: 3px;
   }
-  
+
   .logo {
     margin-right: auto;
   }
+
   .recomendaçoeswrapper {
     position: relative;
     left: 72px;
+    display: none;
   }
-  
-  @media (min-width: 614px) and (max-width: 935px) {
-    * {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    }
-  
-    header {
-      padding-right: 20px;
-      padding-left: 20px;
-      border-bottom: 1px solid #dbdbdb;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .storiesbar {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      flex-wrap: nowrap;
-      margin-top: 88px;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      padding: 5%;
-      box-sizing: border-box;
-    }
-  
-    .bigpeople {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .posts {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      margin-top: 24px;
-      width: 100%;
-    }
-  
-    .space-between {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .smallpeople {
-      display: flex;
-      gap: 10px;
-    }
-  
-    .post {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      width: 100%;
-    }
-  
-    .post-header {
-      padding: 18px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      box-sizing: border-box;
-    }
-  
-    .recomendaçoes {
-      display: flex;
-      flex-direction: column;
-      width: 0px;
-      margin-top: 88px;
-      position: sticky;
-      top: 0px;
-      gap: 10px;
-      height: 594px;
-    }
-  
-    ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      gap: 5px;
-      list-style: none;
-    }
-  
-    .font12 {
-      font-size: 70%;
-    }
-  
-    .font14 {
-      font-size: 14px;
-    }
-  
-    .font11 {
-      font-size: 11px;
-    }
-  
-    .gray {
-      color: #8e8e8e;
-    }
-    .navinfooptions li a,
-    .font11 {
-      font-size: 11px;
-    }
-    .navinfo {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-    .navinfooptions {
-      flex-wrap: wrap;
-    }
-    .page {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      padding-bottom: 40px;
-      padding-right: 0;
-      padding-left: 0;
-      justify-content: center;
-    }
-  
-    .header0 {
-      display: flex;
-      justify-content: space-between;
-      height: 54px;
-      align-items: center;
-      width: inherit;
-    }
-  
-    button {
-      background-color: #ffffff;
-      padding-top: 10px;
-      padding-left: 10px;
-      padding-bottom: 10px;
-      padding-right: 0px;
-      border: 0;
-      color: #139ef2;
-      font-weight: bold;
-    }
-  
-    .align-center {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .bold500 {
-      font-weight: 500;
-    }
-  
-    input[type="text"] {
-      text-align: center;
-      width: 100%;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      padding-top: 7px;
-      padding-bottom: 7px;
-    }
-    .storiescontainer {
-      width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .header1 {
-      gap: 5px;
-    }
-  
-    .postfooterline2 {
-      display: flex;
-      gap: 5px;
-      margin-top: 5px;
-    }
-  
-    .postfooter {
-      padding: 18px;
-      padding-top: 10px;
-    }
-  
-    ion-icon {
-      font-size: 22px;
-    }
-  
-    .gap13 {
-      gap: 13px;
-      display: flex;
-    }
-  
-    .logoinsta {
-      height: 29px;
-      border-right: 1px solid #dbdbdb;
-      padding: 8px;
-      margin: 3px;
-    }
-  
-    .logo {
-      margin-right: auto;
-    }
-  
-    .recomendaçoeswrapper {
-      position: relative;
-      left: 72px;
-      display: none;
-    }
-  
-    main {
-      width: 70%;
-    }
-  
-    .bigpeople {
-      width: 11%;
-      height: 80%;
-    }
-  
-    form {
-      width: 20%;
-    }
+
+  main {
+    width: 70%;
   }
-  
-  @media (max-width: 614px) {
-    * {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    }
-  
-    header {
-      padding-right: 20px;
-      padding-left: 20px;
-      border-bottom: 1px solid #dbdbdb;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .storiesbar {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      flex-wrap: nowrap;
-      margin-top: 0;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      padding: 5%;
-      box-sizing: border-box;
-    }
-  
-    .bigpeople {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .posts {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      margin-top: 0px;
-      width: 100%;
-    }
-  
-    .space-between {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .smallpeople {
-      display: flex;
-      gap: 10px;
-    }
-  
-    .post {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border: 0;
-    }
-  
-    .post-header {
-      padding: 18px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      box-sizing: border-box;
-    }
-  
-    .recomendaçoes {
-      display: flex;
-      flex-direction: column;
-      width: 0px;
-      margin-top: 88px;
-      position: sticky;
-      top: 0px;
-      gap: 10px;
-      height: 594px;
-    }
-  
-    ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      gap: 5px;
-      list-style: none;
-    }
-  
-    .font12 {
-      font-size: 70%;
-    }
-  
-    .font14 {
-      font-size: 70%;
-    }
-  
-    .font11 {
-      font-size: 11px;
-    }
-  
-    .navinfooptions li a,
-    .font11 {
-      font-size: 11px;
-    }
-    .navinfo {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-    .navinfooptions {
-      flex-wrap: wrap;
-    }
-    .page {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      padding-bottom: 40px;
-      padding-right: 0;
-      padding-left: 0;
-      justify-content: center;
-    }
-  
-    .header0 {
-      display: flex;
-      justify-content: space-between;
-      height: 54px;
-      align-items: center;
-      width: inherit;
-    }
-  
-    form {
-      display: none;
-    }
-    input[type="text"] {
-      text-align: center;
-      width: 100%;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      padding-top: 7px;
-      padding-bottom: 7px;
-    }
-    .storiescontainer {
-      width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .header1 {
-      gap: 5px;
-    }
-  
-    .postfooterline2 {
-      display: flex;
-      gap: 5px;
-      margin-top: 5px;
-    }
-  
-    .postfooter {
-      padding: 18px;
-      padding-top: 10px;
-    }
-  
-    .gap13 {
-      gap: 13px;
-      display: flex;
-    }
-  
-    .logoinsta {
-      height: 29px;
-      border-right: 0;
-      padding: 8px;
-      margin: 3px;
-      align-self: center;
-    }
-    .logo {
-      align-self: center;
-      margin: 0;
-    }
-  
-    .recomendaçoeswrapper {
-      position: relative;
-      left: 72px;
-      display: none;
-    }
-  
-    main {
-      width: 100%;
-    }
-  
-    .bigpeople {
-      width: 11%;
-      height: 80%;
-    }
-  
-  
-    .header2 {
-      display: none;
-    }
-    .header4 {
-      display: none;
-    }
-    footer {
-      display: flex;
-      bottom: 0;
-      background-color: white;
-    }
+
+  .bigpeople {
+    width: 11%;
+    height: 80%;
   }
-  
+
+  form {
+    width: 20%;
+  }
+}
+
+@media (max-width: 614px) {
+  * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  header {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .storiesbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 5%;
+    box-sizing: border-box;
+    gap: 6%;
+  }
+
+  .bigpeople {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .smallpeople {
+    display: flex;
+    gap: 10px;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 0;
+  }
+
+  .post-header {
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .recomendaçoes {
+    display: flex;
+    flex-direction: column;
+    width: 0px;
+    margin-top: 88px;
+    position: sticky;
+    top: 0px;
+    gap: 10px;
+    height: 594px;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+    list-style: none;
+  }
+
+  .font12 {
+    font-size: 70%;
+  }
+
+  .font14 {
+    font-size: 70%;
+  }
+
+  .font11 {
+    font-size: 11px;
+  }
+
+  .navinfooptions li a,
+  .font11 {
+    font-size: 11px;
+  }
+  .navinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .navinfooptions {
+    flex-wrap: wrap;
+  }
+  .page {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .header0 {
+    display: flex;
+    justify-content: space-between;
+    height: 54px;
+    align-items: center;
+    width: inherit;
+  }
+
+  form {
+    display: none;
+  }
+  input[type="text"] {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .storiescontainer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .header1 {
+    gap: 5px;
+  }
+
+  .postfooterline2 {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .postfooter {
+    padding: 18px;
+    padding-top: 10px;
+  }
+
+  .gap13 {
+    gap: 13px;
+    display: flex;
+  }
+
+  .logoinsta {
+    height: 29px;
+    border-right: 0;
+    padding: 8px;
+    margin: 3px;
+    align-self: center;
+  }
+  .logo {
+    align-self: center;
+    margin: 0;
+  }
+
+  .recomendaçoeswrapper {
+    position: relative;
+    left: 72px;
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .bigpeople {
+    width: 11%;
+    height: 80%;
+  }
+
+
+  .header2 {
+    display: none;
+  }
+  .header4 {
+    display: none;
+  }
+  footer {
+    display: flex;
+    bottom: 0;
+    background-color: white;
+  }
+}

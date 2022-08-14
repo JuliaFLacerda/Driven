@@ -1,3 +1,6 @@
+let nome = "";
+let endereço = "";
+
 function selecionarsobremesa(num){
 
     let selecionado = document.querySelector('.sobremesa .green');
@@ -19,9 +22,14 @@ function selecionarsobremesa(num){
         let price2 = document.querySelector('.bebida .green .price');
         let price3 = document.querySelector('.comida .green .price');
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
-        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n- Bebida: " + selecionado2.textContent + "\n- Sobremesa: " + selecionado.textContent + "\nTotal: " + sumprices;
-        stringfeita = encodeURIComponent(string);
-        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        function pedir(){
+            nome = prompt("Nome: ");
+            endereço = prompt("Endereço: ");
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            stringfeita = encodeURIComponent(string);
+            whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        };
+        button.addEventListener('click', pedir);
     }
 
 }
@@ -46,9 +54,14 @@ function selecionarbebida(num){
         let price2 = document.querySelector('.sobremesa .green .price');
         let price3 = document.querySelector('.comida .green .price');
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
-        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n- Bebida: " + selecionado.textContent + "\n- Sobremesa: " + selecionado2.textContent  + "\nTotal: " + sumprices;
-        stringfeita = encodeURIComponent(string);
-        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        function pedir(){
+            nome = prompt("Nome: ");
+            endereço = prompt("Endereço: ");
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            stringfeita = encodeURIComponent(string);
+            whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        };
+        button.addEventListener('click', pedir);
     }
 
 }
@@ -75,9 +88,16 @@ function selecionarcomida(num){
         let price2 = document.querySelector('.sobremesa .green .price');
         let price3 = document.querySelector('.bebida .green .price');
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
-        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices;
-        stringfeita = encodeURIComponent(string);
-        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        let string = "";
+        function pedir(){
+            nome = prompt("Nome: ");
+            endereço = prompt("Endereço: ");
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            stringfeita = encodeURIComponent(string);
+            whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
+        };
+        button.addEventListener('click', pedir);
     }
 
 }
+

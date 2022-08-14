@@ -6,16 +6,22 @@ function selecionarsobremesa(num){
         selecionado.classList.remove('green');
     }
 
-    const seletor = '.'+num;    
-    const div = document.querySelector(seletor);
-    div.classList.add('green');
-    selecionado = document.querySelector('.comida .green');
+    num.classList.add('green');
+    selecionado = document.querySelector('.sobremesa .green .tituloopçao');
     const button = document.querySelector('.donebutton');
-    const selecionado2 = document.querySelector('.bebida .green');
-    const selecionado3 = document.querySelector('.comida .green');
+    const whatsapp = document.querySelector('.whatsapp');
+    const selecionado2 = document.querySelector('.bebida .green .tituloopçao');
+    const selecionado3 = document.querySelector('.comida .green .tituloopçao');
     if(selecionado !== null && selecionado2 !== null && selecionado3 !== null){
-        button.textContent = "Concluir pedido";
-        button.style.cssText = "background-color: green;";
+        whatsapp.textContent = "Fechar pedido";
+        button.style.cssText = "background-color: #32B72F;";
+        let price1 = document.querySelector('.sobremesa .green .price');
+        let price2 = document.querySelector('.bebida .green .price');
+        let price3 = document.querySelector('.comida .green .price');
+        let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
+        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n- Bebida: " + selecionado2.textContent + "\n- Sobremesa: " + selecionado.textContent + "\nTotal: " + sumprices;
+        stringfeita = encodeURIComponent(string);
+        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
     }
 
 }
@@ -27,16 +33,22 @@ function selecionarbebida(num){
         selecionado.classList.remove('green');
     }
 
-    const seletor = '.'+num;    
-    const div = document.querySelector(seletor);
-    div.classList.add('green');
-    selecionado = document.querySelector('.comida .green');
+   num.classList.add('green');
+    selecionado = document.querySelector('.bebida .green .tituloopçao');
     const button = document.querySelector('.donebutton');
-    const selecionado2 = document.querySelector('.sobremesa .green');
-    const selecionado3 = document.querySelector('.comida .green');
+    const whatsapp = document.querySelector('.whatsapp');
+    const selecionado2 = document.querySelector('.sobremesa .green .tituloopçao');
+    const selecionado3 = document.querySelector('.comida .green .tituloopçao');
     if(selecionado !== null && selecionado2 !== null && selecionado3 !== null){
-        button.textContent = "Concluir pedido";
-        button.style.cssText = "background-color: green;";
+        whatsapp.textContent = "Fechar pedido";
+        button.style.cssText = "background-color: #32B72F;";
+        let price1 = document.querySelector('.bebida .green .price');
+        let price2 = document.querySelector('.sobremesa .green .price');
+        let price3 = document.querySelector('.comida .green .price');
+        let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
+        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n- Bebida: " + selecionado.textContent + "\n- Sobremesa: " + selecionado2.textContent  + "\nTotal: " + sumprices;
+        stringfeita = encodeURIComponent(string);
+        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
     }
 
 }
@@ -48,18 +60,24 @@ function selecionarcomida(num){
         selecionado.classList.remove('green');
     }
 
-    const seletor = '.'+num;    
-    const div = document.querySelector(seletor);
-    div.classList.add('green');
-    selecionado = document.querySelector('.comida .green');
+    num.classList.add('green');
+    selecionado = document.querySelector('.comida .green .tituloopçao');
 
     const button = document.querySelector('.donebutton');
-    const selecionado2 = document.querySelector('.sobremesa .green');
-    const selecionado3 = document.querySelector('.bebida .green');
+    const whatsapp = document.querySelector('.whatsapp');
+    const selecionado2 = document.querySelector('.sobremesa .green .tituloopçao');
+    const selecionado3 = document.querySelector('.bebida .green .tituloopçao');
     
     if(selecionado !== null && selecionado2 !== null && selecionado3 !== null){
-        button.textContent = "Concluir pedido";
-        button.style.cssText = "background-color: green;";
+        whatsapp.textContent = "Fechar pedido";
+        button.style.cssText = "background-color: #32B72F;";
+        let price1 = document.querySelector('.comida .green .price');
+        let price2 = document.querySelector('.sobremesa .green .price');
+        let price3 = document.querySelector('.bebida .green .price');
+        let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
+        let string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices;
+        stringfeita = encodeURIComponent(string);
+        whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
     }
 
 }

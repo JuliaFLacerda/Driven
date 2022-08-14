@@ -1,7 +1,6 @@
 let arrcomida = [];
 let arrbebida = [];
 let arrsobremesa = [];
-let selecionados3 = false;
 const opçoescomida = document.querySelectorAll(".comida");
 const opçoesbebida = document.querySelectorAll(".bebida");
 const opçoessobremesa = document.querySelectorAll(".sobremesa");
@@ -17,10 +16,8 @@ for(const i of opçoessobremesa){
     i.addEventListener('click', seleçaosobremesa, false);
 };
 
-/* Not e.target but the parent selected */
 function seleçaocomida(e){
 
-    e.stopPropagation();
     if(arrcomida.length === 0){
     arrcomida.push(this);
     arrcomida[0].classList.toggle("green");
@@ -38,7 +35,6 @@ function seleçaocomida(e){
 }
 function seleçaosobremesa(e){
 
-    e.stopPropagation();
     if(arrsobremesa.length === 0){
     arrsobremesa.push(this);
     arrsobremesa[0].classList.toggle("green");

@@ -1,6 +1,3 @@
-let nome = "";
-let endereço = "";
-
 function selecionarsobremesa(num){
 
     let selecionado = document.querySelector('.sobremesa .green');
@@ -23,8 +20,8 @@ function selecionarsobremesa(num){
         let price3 = document.querySelector('.comida .green .price');
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
         function pedir(){
-            nome = prompt("Nome: ");
-            endereço = prompt("Endereço: ");
+            let nome = prompt("Nome: ");
+            let endereço = prompt("Endereço: ");
             string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
@@ -55,8 +52,8 @@ function selecionarbebida(num){
         let price3 = document.querySelector('.comida .green .price');
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
         function pedir(){
-            nome = prompt("Nome: ");
-            endereço = prompt("Endereço: ");
+            let nome = prompt("Nome: ");
+            let endereço = prompt("Endereço: ");
             string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
@@ -90,8 +87,8 @@ function selecionarcomida(num){
         let sumprices = (parseFloat(price1.textContent.replace(/,/, '.').slice(3, price1.length)) + parseFloat(price2.textContent.replace(/,/, '.').slice(3, price2.length)) + parseFloat(price3.textContent.replace(/,/, '.').slice(3, price3.length))).toFixed(2);
         let string = "";
         function pedir(){
-            nome = prompt("Nome: ");
-            endereço = prompt("Endereço: ");
+            let nome = prompt("Nome: ");
+            let endereço = prompt("Endereço: ");
             string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;

@@ -15,7 +15,8 @@ let counter = 0;
     for(let i = 0; i < cardnum;i++){
       let newcard = document.createElement('div');
       newcard.classList.add("card");
-      newcard.dataset.name = nomedasCartas[i]
+      newcard.dataset.name = nomedasCartas[i];
+      newcard.dataset.index = i;
       let cardimg = document.createElement('img');
       cardimg.src = "img/front.png";
       cardimg.classList.add("cardimg");
@@ -38,7 +39,7 @@ if(this.dataset.fixed != "fixed"){
         counter++;
     }
     else{
-        if(this.dataset.name === lastname){
+        if(this.dataset.name === lastname && this.dataset.index != lastcard.dataset.index){
             //here
         lastname = null;
         //anterior fixada
@@ -85,5 +86,3 @@ if(vartrue === true){
     alert("Você ganhou em " + counter + " jogadas!")
 }
 }
-
-//not shuffling apropriadamente

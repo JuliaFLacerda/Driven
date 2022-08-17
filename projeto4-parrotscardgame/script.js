@@ -4,7 +4,7 @@ let lastcard = 0;
 let counter = 0;
 
     let cardnum = prompt("Por favor insira um número de cartas entre 4 e 14");
-    while(cardnum <4 || cardnum >14){
+    while(cardnum <4 || cardnum >14 || cardnum % 2 != 0){
         cardnum = prompt("Por favor insira um número de cartas entre 4 e 14");
     }
     nomedasCartas = nomedasCartas.slice(0,(cardnum));
@@ -71,6 +71,19 @@ if(this.dataset.fixed != "fixed"){
     }
 };
 //then check for win
+let vartrue = false;
+for(const i of cartas){
+    if(i.dataset.fixed === "fixed"){
+        vartrue = true;
+    }
+    else{
+        vartrue = false;
+        break;
+    }
+};
+if(vartrue === true){
+    alert("Você ganhou em " + counter + " jogadas!")
+}
 }
 
 //not shuffling apropriadamente

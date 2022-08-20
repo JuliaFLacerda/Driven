@@ -1,30 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 body{
     background-color: #A7E9AF;
 }
 
 header{
-    font-family: Roboto;
     color: #75B79E;
+    font-family: 'Roboto', sans-serif;
+    line-height: 66px;
+letter-spacing: -0.004em;
     font-size: 56px;
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 50px;
+    padding-bottom: 3%;
     font-weight: 700;
     text-align: center;
+    padding-top: 3%;
 }
 
 main{
+    display: flex;
     width: 100%;
     justify-content: center;
-    display: flex;
 }
+
 
 .cardcontainer{
     display: flex;
-    flex-flow: row wrap;
-    width: 80%;
-    gap: 4%;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 30px;
+    justify-content: center;
 }
 
 .card{
@@ -36,27 +44,73 @@ main{
     width: 117px;
     height: 146px;
     box-sizing: border-box;
-    margin-bottom: 4%;
+    border-radius: 5px;
     font-size: 0;
-}
-
-.cardimg{
-    width: 100px;
-    height: 100px;
+    transition: all 1s;
+    background-image: url("img/front.png");
 }
 
 .hidden{
     display: none;
 }
 
+.bobross, .explody, .fiesta, .metal, .revertit, .triplets, .unicorn{
+    transform: rotatey(180deg);}
+
+.card.bobross{
+ background-image: url("img/bobrossparrot.gif");
+ background-repeat: no-repeat;
+}
+
+.card.explody{
+    background-image: url("img/explodyparrot.gif");
+    background-repeat: no-repeat;
+}
+
+.card.fiesta{
+    background-image: url("img/fiestaparrot.gif");
+    background-repeat: no-repeat;
+}
+
+.card.metal{
+    background-image: url("img/metalparrot.gif");
+    background-repeat: no-repeat;
+}
+
+.card.revertit{
+    background-image: url("img/revertitparrot.gif");
+    background-repeat: no-repeat;
+}
+
+.card.triplets{
+    background-image: url("img/tripletsparrot.gif");
+    background-repeat: no-repeat;
+}
+
+.card.unicorn{
+    background-image: url("img/unicornparrot.gif");
+    background-repeat: no-repeat;;
+}
 
 @media (max-width: 760px){
     header{
         font-size: 36px;
+        padding-bottom: 6%;
+        padding-top: 40px;
+    }
+    
+    header div{
+        width: 80%;
+        line-height: 42px;
+        letter-spacing: -0.004em;
+
+    }
+    .cardcontainer{
+        flex-direction: column;
+        align-items: center;
     }
 
-    .cardcontainer{
-        width: 117px;
-        gap: 1px;
+    .card{
+        margin: 0;
     }
 }

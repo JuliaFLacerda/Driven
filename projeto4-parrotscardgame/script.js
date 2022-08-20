@@ -17,10 +17,6 @@ let counter = 0;
       newcard.classList.add("card");
       newcard.dataset.name = nomedasCartas[i];
       newcard.dataset.index = i;
-      let cardimg = document.createElement('img');
-      cardimg.src = "img/front.png";
-      cardimg.classList.add("cardimg");
-      newcard.appendChild(cardimg);
       container.appendChild(newcard);
     };
 
@@ -34,44 +30,31 @@ if(this.dataset.fixed != "fixed"){
     if(lastname === null){
         lastname = this.dataset.name;
         lastcard = this;
-        let firstChild = lastcard.firstElementChild; 
-        firstChild.src = "img/" + lastcard.dataset.name + "parrot.gif";
+        lastcard.classList.add("" + lastcard.dataset.name);
         counter++;
     }
     else{
         if(this.dataset.name === lastname && this.dataset.index != lastcard.dataset.index){
-            //here
         lastname = null;
-        //anterior fixada
+        this.classList.add("" + this.dataset.name);
         lastcard.dataset.fixed = "fixed";
         lastcard = this;
-        //atual fixada
         lastcard.dataset.fixed = "fixed";
-        //imagem da atual colocada
-        lastname = lastcard.dataset.name;
-        let firstChild = lastcard.firstElementChild; 
-        firstChild.src = "img/" + lastname + "parrot.gif";
-        counter++
+        counter++;
         lastcard = null;
         lastname = null;
 
         }
         else{
-            //imagem da anterior revertida
-        let firstChild = lastcard.firstElementChild; 
-        firstChild.src = "img/front.png";
-        //atual selecionada
-        lastcard= this;
-        firstChild = lastcard.firstElementChild; 
-        //imagem da atual colocada
-        lastname = this.dataset.name;
-        firstChild.src = "img/" + lastname + "parrot.gif";
-        //lastname é da atual
+        let currentcard = this;
+        this.classList.add("" + this.dataset.name);
+         setTimeout(virarasduas, 1000, currentcard, lastcard);
+        lastcard= null;
+        lastname = null;
         counter++;
         }
     }
 };
-//then check for win
 let vartrue = false;
 for(const i of cartas){
     if(i.dataset.fixed === "fixed"){
@@ -85,4 +68,9 @@ for(const i of cartas){
 if(vartrue === true){
     alert("Você ganhou em " + counter + " jogadas!")
 }
+}
+
+function virarasduas(currentcard, lastcard){
+    currentcard.classList.remove("" + currentcard.dataset.name);
+    lastcard.classList.remove("" + lastcard.dataset.name);
 }

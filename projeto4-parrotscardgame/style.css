@@ -36,18 +36,22 @@ main{
 }
 
 .card{
-    padding-top: 24px;
-    padding-left: 10px;
-    padding-right: 7px;
-    padding-bottom: 22px;
     background-color: #99CEA8;
-    width: 117px;
-    height: 146px;
-    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    
+border-top: 24px solid #99CEA8;
+border-left: 10px solid #99CEA8;
+border-right: 7px solid #99CEA8;
+border-bottom: 22px solid #99CEA8;
     border-radius: 5px;
     font-size: 0;
     transition: all 1s;
     background-image: url("img/front.png");
+    box-sizing: content-box;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
 }
 
 .hidden{

@@ -78,15 +78,23 @@ for(const i of cartas){
 if(vartrue === true){
     alert("Você ganhou em " + counter + " jogadas!");
     counter = 0;
+    clearInterval(myInterval);
+    sec = 0;
     let recomeçar = false;
     while(!(recomeçar)){
         recomeçar = prompt("Você gostaria de recomeçar a partida?");
-        if(recomeçar === "sim" || recomeçar === "não"){
+        if(recomeçar === "sim"){
+            timecounter.textContent = 0;
+            myInterval = setInterval(umsegundo, 1000);
             removercartas();
             recomeçar = true;
             preparartabuleiro();
             prepararjogo();
         };
+        if(recomeçar === "não"){
+            removercartas();
+            break;
+        }
     }
 }
 }
@@ -104,3 +112,12 @@ function removercartas(){
     container.classList.add("cardcontainer");
     main.appendChild(container);
 }
+
+
+let timecounter = document.querySelector('span');
+let sec = 0;
+function umsegundo(){
+        sec++;
+        timecounter.textContent = sec;
+}
+let myInterval = setInterval(umsegundo, 1000);

@@ -18,6 +18,7 @@ letter-spacing: -0.004em;
     font-weight: 700;
     text-align: center;
     padding-top: 3%;
+    position: relative;
 }
 
 main{
@@ -96,6 +97,22 @@ border-bottom: 22px solid #99CEA8;
     background-repeat: no-repeat;;
 }
 
+.counter{
+    border: 3px solid #99CEA8;
+    padding: 10px;
+    font-size: 32px;
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    right: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media (max-width: 760px){
     header{
         font-size: 36px;
@@ -116,5 +133,15 @@ border-bottom: 22px solid #99CEA8;
 
     .card{
         margin: 0;
+    }
+
+    .counter{
+        border: 1.5px solid #99CEA8;
+    padding: 5px;
+    font-size: 20px;
+    width: 60px;
+    height: 40px;
+    right: 15px;
+    position: fixed;
     }
 }

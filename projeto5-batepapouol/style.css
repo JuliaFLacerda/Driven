@@ -9,6 +9,9 @@ header{
     align-items: center;
     padding-left: 6%;
     padding-right: 6%;
+    position: fixed;
+    top: 0;
+    background-color: white;
 }
 
 main{
@@ -19,6 +22,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1%;
+    margin-bottom: 85px;
 }
 
 footer{
@@ -29,6 +33,9 @@ footer{
     align-items: center;
     padding-left: 6%;
     padding-right: 6%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
 }
 
 .envie-mensagem{
@@ -47,7 +54,7 @@ input::placeholder{
     color: black;
 }
 
-.saiu{
+.status, .message{
     width: 100%;
     background-color: #DCDCDC;
     padding-left: 2%;

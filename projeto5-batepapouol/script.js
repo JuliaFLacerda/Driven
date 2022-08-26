@@ -20,12 +20,6 @@ function prepararmensagens(){
     function mensagensnatela(resposta){
     let mensagens = resposta.data;
     for(let i = 0; i < mensagens.length;i++){
-        /*from: "João",
-		to: "Todos",
-		text: "entra na sala...",
-		type: "status",
-		time: "08:01:17"*/
-        //aqui tem branching de type, o abaixo é pra status
         if(mensagens[i].type === "status"){
             let newmsg = document.createElement('div');
             newmsg.classList.add("" + mensagens[i].type);
@@ -95,6 +89,7 @@ const checagem = setInterval(aindaonline, 5000, userobj);
 
 function aindaonline(user){
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", user);
+    //alert
     promessa.catch(saiudasala)
 }
 
@@ -109,10 +104,12 @@ function enviarmensagem(){
         text: mensagemaenviar.value,
         type: "message",
     }
+    mensagemaenviar.value = "Escreva aqui...";
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", obj);
+    promessa.then(prepararmensagens);
     promessa.catch(erro);
     function erro(){
-        alert("Ocorreu um erro no envio, tente novamente");
+        window.location.reload();
     }
 
 }
@@ -146,3 +143,13 @@ function mensagemdeentrada(){
 }
 
 const recarregarmensagens = setInterval(prepararmensagens, 3000)
+prepararmensagens();
+
+function enviarcomenter(e){
+    if(e.keyCode === 13){
+        enviarmensagem();
+    }
+    else{}
+}
+
+mensagemaenviar.addEventListener('keydown', enviarcomenter);

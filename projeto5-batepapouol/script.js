@@ -1,69 +1,127 @@
-let name = prompt("Qual seu lindo nome?");
+const inputname = document.querySelector('.inputentre');
+const namebutton = document.querySelector('.botaoentre');
+const loginscreen = document.querySelector('.loginscreencontainer');
+namebutton.addEventListener('click', enviarnome);
+let userobj = {};
+let recarregarmensagens = null;
+let checagem = null;
 
-let userobj = {name,}
+function enviarnome(){
+    let name = inputname.value;
+    userobj = {name,};
+    const promessa1 = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", userobj)
+    promessa1.catch(erronaentrada);
+    loginscreen.classList.add("hidden");
+    checagem = setInterval(aindaonline, 5000, userobj);
+    prepararmensagens();
+    recarregarmensagens = setInterval(prepararmensagens, 3000);
 
-const promessa1 = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", userobj)
-promessa1.then(mensagemdeentrada);
-promessa1.catch(erronaentrada);
+
+}
+
 
 function prepararmensagens(){
 //busca mensagens e coloca elas na tela;
     const body = document.querySelector('body');
     let main = document.querySelector('main');
-    body.removeChild(main);
-    main = document.createElement('main');
-    body.appendChild(main);
-    main = document.querySelector('main');
+    let lastmessage = document.querySelector('.last');
     const promessa = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
     promessa.then(mensagensnatela);
     promessa.catch("Ocorreu um erro, recarregue a página")
     function mensagensnatela(resposta){
     let mensagens = resposta.data;
-    for(let i = 0; i < mensagens.length;i++){
-        if(mensagens[i].type === "status"){
+    if(lastmessage != null){
+        let novamensagem = mensagens[mensagens.length -1];
+        if(novamensagem.type === "status"){
             let newmsg = document.createElement('div');
-            newmsg.classList.add("" + mensagens[i].type);
-            main.appendChild(newmsg);
-            let horario = document.createElement('div');
-            horario.classList.add("horario");
-            horario.textContent = mensagens[i].time;
-            newmsg.appendChild(horario);
-            let user = document.createElement('div');
-            user.classList.add("username");
-            user.textContent = mensagens[i].from;
-            newmsg.appendChild(user);
-            let anuncio = document.createElement('div');
-            anuncio.classList.add("anuncio");
-            anuncio.textContent = mensagens[i].text;
-            newmsg.appendChild(anuncio);
+        newmsg.classList.add("" + novamensagem.type);
+        main.appendChild(newmsg);
+        let horario = document.createElement('div');
+        horario.classList.add("horario");
+        horario.textContent = novamensagem.time;
+        newmsg.appendChild(horario);
+        let user = document.createElement('div');
+        user.classList.add("username");
+        user.textContent = novamensagem.from;
+        newmsg.appendChild(user);
+        let anuncio = document.createElement('div');
+        anuncio.classList.add("anuncio");
+        anuncio.textContent = novamensagem.text;
+        newmsg.appendChild(anuncio);
         }
-        else if(mensagens[i].type === "message"){
+        else if(novamensagem.type === "message"){
             let newmsg = document.createElement('div');
-            newmsg.classList.add("" + mensagens[i].type);
-            main.appendChild(newmsg);
-            let horario = document.createElement('div');
-            horario.classList.add("horario");
-            horario.textContent = mensagens[i].time;
-            newmsg.appendChild(horario);
-            let user = document.createElement('div');
-            user.classList.add("username");
-            user.textContent = mensagens[i].from;
-            newmsg.appendChild(user);
-            let anuncio = document.createElement('div');
-            anuncio.classList.add("anuncio");
-            anuncio.textContent = "para";
-            newmsg.appendChild(anuncio);
-            let to = document.createElement('div');
-            to.classList.add("anuncio");
-            to.textContent = mensagens[i].to + ": ";
-            newmsg.appendChild(to);
-            let conteudo = document.createElement('div');
-            conteudo.classList.add("username");
-            conteudo.textContent = mensagens[i].text;
-            newmsg.appendChild(conteudo);
-        }
-    };
-    let lastmessage = document.querySelector('.last');
+                newmsg.classList.add("" + novamensagem.type);
+                main.appendChild(newmsg);
+                let horario = document.createElement('div');
+                horario.classList.add("horario");
+                horario.textContent = novamensagem.time;
+                newmsg.appendChild(horario);
+                let user = document.createElement('div');
+                user.classList.add("username");
+                user.textContent = novamensagem.from;
+                newmsg.appendChild(user);
+                let anuncio = document.createElement('div');
+                anuncio.classList.add("anuncio");
+                anuncio.textContent = "para";
+                newmsg.appendChild(anuncio);
+                let to = document.createElement('div');
+                to.classList.add("anuncio");
+                to.textContent = novamensagem.to + ": ";
+                newmsg.appendChild(to);
+                let conteudo = document.createElement('div');
+                conteudo.classList.add("username");
+                conteudo.textContent = novamensagem.text;
+                newmsg.appendChild(conteudo);
+        };
+
+    }
+    else{
+        for(let i = 0; i < mensagens.length;i++){
+            if(mensagens[i].type === "status"){
+                let newmsg = document.createElement('div');
+                newmsg.classList.add("" + mensagens[i].type);
+                main.appendChild(newmsg);
+                let horario = document.createElement('div');
+                horario.classList.add("horario");
+                horario.textContent = mensagens[i].time;
+                newmsg.appendChild(horario);
+                let user = document.createElement('div');
+                user.classList.add("username");
+                user.textContent = mensagens[i].from;
+                newmsg.appendChild(user);
+                let anuncio = document.createElement('div');
+                anuncio.classList.add("anuncio");
+                anuncio.textContent = mensagens[i].text;
+                newmsg.appendChild(anuncio);
+            }
+            else if(mensagens[i].type === "message"){
+                let newmsg = document.createElement('div');
+                newmsg.classList.add("" + mensagens[i].type);
+                main.appendChild(newmsg);
+                let horario = document.createElement('div');
+                horario.classList.add("horario");
+                horario.textContent = mensagens[i].time;
+                newmsg.appendChild(horario);
+                let user = document.createElement('div');
+                user.classList.add("username");
+                user.textContent = mensagens[i].from;
+                newmsg.appendChild(user);
+                let anuncio = document.createElement('div');
+                anuncio.classList.add("anuncio");
+                anuncio.textContent = "para";
+                newmsg.appendChild(anuncio);
+                let to = document.createElement('div');
+                to.classList.add("anuncio");
+                to.textContent = mensagens[i].to + ": ";
+                newmsg.appendChild(to);
+                let conteudo = document.createElement('div');
+                conteudo.classList.add("username");
+                conteudo.textContent = mensagens[i].text;
+                newmsg.appendChild(conteudo);
+            }
+        };        
+    }
     if(lastmessage != null){
         lastmessage.classList.remove("last");
         lastmessage = main.lastChild;
@@ -81,11 +139,8 @@ function prepararmensagens(){
 
 function erronaentrada(erro){
     while(erro.response.status === 400){
-        name = prompt("Qual seu lindo nome?");
     };
 }
-
-const checagem = setInterval(aindaonline, 5000, userobj);
 
 function aindaonline(user){
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", user);
@@ -127,23 +182,6 @@ function saiudasala(){
     };
     const promessapostagem = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", msgsaida);
 }
-
-function mensagemdeentrada(){
-    //usuario atual entrou na sala
-    var currentdate = new Date();
-    let entrou = {
-        from: (userobj.name),
-        to: "Todos",
-        text: "entra na sala...",
-        type: "status",
-        time: currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds(),
-    }
-    const promessa2 = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", entrou);
-    promessa2.catch(console.log("Error"));
-}
-
-const recarregarmensagens = setInterval(prepararmensagens, 3000)
-prepararmensagens();
 
 function enviarcomenter(e){
     if(e.keyCode === 13){

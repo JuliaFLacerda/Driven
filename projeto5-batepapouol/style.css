@@ -1,3 +1,13 @@
+*{
+    font-family: 'Roboto';
+}
+
+ion-icon.green{
+    color: green;
+}
+
+body, html{height: 100%;}
+
 ion-icon{
     font-size: 32px;
 }
@@ -16,7 +26,7 @@ header{
 
 main{
     background-color:#E5E5E5;
-    width: 100%;
+    width: 100vw !important;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -54,7 +64,7 @@ input::placeholder{
 }
 
 .status, .message{
-    width: 100%;
+    width: 100vw !important;
     background-color: #DCDCDC;
     padding-left: 2%;
     padding-right: 2%;
@@ -62,6 +72,8 @@ input::placeholder{
     align-items: center;
     gap: 1.5%;
     height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .username{
@@ -80,7 +92,7 @@ input::placeholder{
     font-size: 14px;
 }
 
-.loginscreencontainer.hidden{
+.loginscreencontainer.hidden, .contactscreen.hidden, .fundopreto.hidden, ion-icon.hidden{
     display: none;
 }
 
@@ -139,4 +151,80 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.fundopreto{
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 30%;
+    height: 100%;
+    position: fixed;
+}
+
+.contactscreen{
+    width: 70%;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    background-color: white;
+}
+
+.contactscreencontainer{
+    width: 100%;
+}
+
+
+.contacttitle{
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.contato, .visibilidade{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    height: 36px;
+    background-color: white;
+}
+
+.iconenome, .visibilidadeeopçao{
+    display: flex;
+    gap: 10px;
+}
+
+.contacttext, .visibilidadetext{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.textoeparaquem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.paraquem{
+    font-style: italic;
+    color:#505050;
+    font-size: 18px;
+}
+
+.selectedvisibility, .selectedcontact{
+    border: 1px solid green;
 }

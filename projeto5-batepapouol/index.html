@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="script2.js"></script>
 </head>
 <body>
     <div class="loginscreencontainer">
@@ -18,18 +18,48 @@
             <button class="botaoentre">Entrar</button>
         </div>
     </div>
-
-
-
-
+    <div class="fundopreto hidden" onclick="closecontactscreen(this)"></div>
+<div class="contactscreen hidden">
+        <div class="contacttitle">Escolha um contato para enviar mensagem</div>
+    <div class="contactscreencontainer">
+        <div class="contato selectedcontact">
+            <div class="iconenome">
+                <!-- <ion-icon name="person-circle"></ion-icon> -->
+                <ion-icon name="people-sharp"></ion-icon>
+                <div class="contacttext">Todos</div>
+            </div>
+            <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+        </div>
+    </div>
+    <div class="contacttitle visual">Escolha a visibilidade</div>
+    <div class="visualscreencontainer">
+        <div class="visibilidade selectedvisibility">
+            <div class="visibilidadeeopçao">
+                <ion-icon name="lock-open"></ion-icon>
+                <div class="visibilidadetext">Público</div>
+            </div>
+            <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+        </div>
+        <div class="visibilidade">
+            <div class="visibilidadeeopçao">
+                <ion-icon name="lock-closed"></ion-icon>
+                <div class="visibilidadetext">Reservadamente</div>
+                <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>
     <header>
         <img class="headerimg" src="img/logo 1.png">
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="people" class="contactscreenopener"></ion-icon>
     </header>
     <main>
     </main>
     <footer>
-    <input type="text" class="envie-mensagem" placeholder="Escreva aqui...">
+    <div class="textoeparaquem">
+        <input type="text" class="envie-mensagem" placeholder="Escreva aqui...">
+        <div class="paraquem"></div>
+    </div>
     <ion-icon class="enviar" name="paper-plane-outline"></ion-icon>
     </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    

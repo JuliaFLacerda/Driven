@@ -124,7 +124,7 @@ function reiniciarquiz(){
     paginadoquiz.classList.add("hidden");
     const header = document.querySelector("header");
     header.scrollIntoView();
-    pegarperguntasdeumquiz(iddoquiz);
+    pegarperguntasdeumquiz();
 }
 
 function voltarparahome(){

@@ -26,10 +26,14 @@ footer {
   box-sizing: border-box;
 }
 header {
-  padding-right: 150px;
-  padding-left: 150px;
+  display: flex;
+  justify-content: center;
   border-bottom: 1px solid #dbdbdb;
   width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 2;
 }
 .header2 {
   margin-right: auto;
@@ -133,12 +137,17 @@ ul {
   flex-wrap: wrap;
 }
 .page {
-  padding-right: 150px;
-  padding-left: 150px;
+  gap: 28px;
   box-sizing: border-box;
-  width: 1281px;
+  width: 935px;
   display: flex;
   padding-bottom: 40px;
+}
+
+.pagewrapper{
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 .header0 {
@@ -146,7 +155,7 @@ ul {
   justify-content: space-between;
   height: 54px;
   align-items: center;
-  width: 981px;
+  width: 935px;
 }
 
 button {
@@ -180,7 +189,7 @@ input[type="text"] {
   padding-bottom: 7px;
 }
 .storiescontainer {
-  width: 616px;
+  width: 614px;
   box-sizing: border-box;
 }
 
@@ -220,23 +229,9 @@ ion-icon {
 }
 .recomendaçoeswrapper {
   position: relative;
-  left: 72px;
 }
 
 @media (min-width: 614px) and (max-width: 935px) {
-  * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-  }
-
-  header {
-    padding-right: 20px;
-    padding-left: 20px;
-    border-bottom: 1px solid #dbdbdb;
-    width: 100%;
-    box-sizing: border-box;
-  }
 
   .storiesbar {
     display: flex;
@@ -261,11 +256,6 @@ ion-icon {
     gap: 60px;
     margin-top: 24px;
     width: 100%;
-  }
-
-  .space-between {
-    display: flex;
-    justify-content: space-between;
   }
 
   .smallpeople {
@@ -350,7 +340,7 @@ ion-icon {
     justify-content: space-between;
     height: 54px;
     align-items: center;
-    width: inherit;
+    width: 80%;
   }
 
   button {
@@ -450,13 +440,6 @@ ion-icon {
       sans-serif;
   }
 
-  header {
-    padding-right: 20px;
-    padding-left: 20px;
-    border-bottom: 1px solid #dbdbdb;
-    width: 100%;
-    box-sizing: border-box;
-  }
 
   .storiesbar {
     display: flex;

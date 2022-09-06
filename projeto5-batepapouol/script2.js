@@ -111,10 +111,7 @@ function mensagensnatela(resposta){
             anuncio.classList.add("anuncio");
             anuncio.textContent = novamensagem.text;
             newmsg.appendChild(anuncio);
-            const contactscreen = document.querySelector('.contactscreen');
-            if(contactscreen.classList.contains("hidden")){
-                newmsg.scrollIntoView();
-            }
+            newmsg.scrollIntoView();
         }
         else if(novamensagem.type === "message"){
             let newmsg = document.createElement('div');
@@ -140,10 +137,8 @@ function mensagensnatela(resposta){
                 conteudo.classList.add("username");
                 conteudo.textContent = novamensagem.text;
                 newmsg.appendChild(conteudo);
-                const contactscreen = document.querySelector('.contactscreen');
-            if(contactscreen.classList.contains("hidden")){
+                
                 newmsg.scrollIntoView();
-            }
         }
         else if(novamensagem.type === "private_message" && (novamensagem.to === userobj.name || novamensagem.from === userobj.name)){
             newmsg.classList.add("" + novamensagem.type);
@@ -168,14 +163,11 @@ function mensagensnatela(resposta){
                 conteudo.classList.add("username");
                 conteudo.textContent = novamensagem.text;
                 newmsg.appendChild(conteudo);
-                const contactscreen = document.querySelector('.contactscreen');
-            if(contactscreen.classList.contains("hidden")){
                 newmsg.scrollIntoView();
-            }
         }
 
     }
-    else if(lastmessage === mensagens[mensagens.length -1]){
+    else if(counter === true){
         let x = 1;
     }
     else{

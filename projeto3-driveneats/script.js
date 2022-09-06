@@ -22,7 +22,7 @@ function selecionarsobremesa(num){
         function pedir(){
             let nome = prompt("Nome: ");
             let endereço = prompt("Endereço: ");
-            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n - Bebida: " + selecionado2.textContent + "\n - Sobremesa: " + selecionado.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
         };
@@ -32,17 +32,17 @@ function selecionarsobremesa(num){
 }
 function selecionarbebida(num){
 
-    let selecionado = document.querySelector('.bebida .green');
+    let selecionado2 = document.querySelector('.bebida .green');
 
-    if ( selecionado !== null){
-        selecionado.classList.remove('green');
+    if ( selecionado2 !== null){
+        selecionado2.classList.remove('green');
     }
 
    num.classList.add('green');
     selecionado = document.querySelector('.bebida .green .tituloopçao');
     const button = document.querySelector('.donebutton');
     const whatsapp = document.querySelector('.whatsapp');
-    const selecionado2 = document.querySelector('.sobremesa .green .tituloopçao');
+    const selecionado = document.querySelector('.sobremesa .green .tituloopçao');
     const selecionado3 = document.querySelector('.comida .green .tituloopçao');
     if(selecionado !== null && selecionado2 !== null && selecionado3 !== null){
         whatsapp.textContent = "Fechar pedido";
@@ -54,7 +54,7 @@ function selecionarbebida(num){
         function pedir(){
             let nome = prompt("Nome: ");
             let endereço = prompt("Endereço: ");
-            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n - Bebida: " + selecionado2.textContent + "\n - Sobremesa: " + selecionado.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
         };
@@ -64,19 +64,19 @@ function selecionarbebida(num){
 }
 function selecionarcomida(num){
 
-    let selecionado = document.querySelector('.comida .green');
+    let selecionado3 = document.querySelector('.comida .green');
 
-    if ( selecionado !== null){
-        selecionado.classList.remove('green');
+    if ( selecionado3 !== null){
+        selecionado3.classList.remove('green');
     }
 
     num.classList.add('green');
-    selecionado = document.querySelector('.comida .green .tituloopçao');
+    selecionado3 = document.querySelector('.comida .green .tituloopçao');
 
     const button = document.querySelector('.donebutton');
     const whatsapp = document.querySelector('.whatsapp');
-    const selecionado2 = document.querySelector('.sobremesa .green .tituloopçao');
-    const selecionado3 = document.querySelector('.bebida .green .tituloopçao');
+    const selecionado = document.querySelector('.sobremesa .green .tituloopçao');
+    const selecionado2 = document.querySelector('.bebida .green .tituloopçao');
     
     if(selecionado !== null && selecionado2 !== null && selecionado3 !== null){
         whatsapp.textContent = "Fechar pedido";
@@ -89,7 +89,7 @@ function selecionarcomida(num){
         function pedir(){
             let nome = prompt("Nome: ");
             let endereço = prompt("Endereço: ");
-            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado.textContent + "\n - Bebida: " + selecionado3.textContent + "\n - Sobremesa: " + selecionado2.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
+            string = "Olá, gostaria de fazer o pedido:\n- Prato: " + selecionado3.textContent + "\n - Bebida: " + selecionado2.textContent + "\n - Sobremesa: " + selecionado.textContent + "\n Total: " + sumprices + "\n" + "\nNome: " + nome + "\nEndereço: " + endereço;
             stringfeita = encodeURIComponent(string);
             whatsapp.href = "https://wa.me/+5512991799057?text=" + stringfeita;
         };
